@@ -1,1 +1,1 @@
-#ignition:on|-|
+#:off|Script gua off in boy|
