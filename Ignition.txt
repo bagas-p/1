@@ -1,1 +1,1 @@
-#:off|Script gua off in boy|
+#:on|Script gua off in boy|
