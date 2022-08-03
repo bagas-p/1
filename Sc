@@ -1,2 +1,2 @@
-#getbitcoin:off|
+#getbitcoin:up|www.getbitcoin.net1
 #
