@@ -1,1 +1,2 @@
-#:on|https://github.com|
+#getbitcoin:on
+#
