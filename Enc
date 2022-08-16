@@ -1,0 +1,38 @@
+<?php
+
+
+system("clear");
+$p = "      ";
+echo "
+$p        ╔═╗┌┐ ┌─┐┬ ┬┌─┐┌─┐┌─┐┌┬┐┌─┐┬─┐  ╔═╗╦ ╦╔═╗
+$p        ║ ║├┴┐├┤ │ │└─┐│  ├─┤ │ │ │├┬┘  ╠═╝╠═╣╠═╝
+$p        ╚═╝└─┘└  └─┘└─┘└─┘┴ ┴ ┴ └─┘┴└─  ╩  ╩ ╩╩  \n";
+echo $p.str_repeat('=',55)."\n";
+echo "$p Crated by BP12 & Encrypt From Kakatoji and Babybot\n";
+echo $p.str_repeat('=',55)."\n\n";
+echo "    Tutorial :
+$p 1. Taruh File yang mau di encrypt satu file dengan obfustaor
+$p 2. Ubah nama file yang mau di encryp dengan nama bot.php 
+$p 3. Pilih menu obfuscator yang mau di gunakan
+$p 4. Enjoyy\n";
+echo "
+  1. Kakatoji x scripter india
+  2. Kakatoji v1
+  3. Babybot v1
+  4. Babybot v2 
+\n";
+
+$a = readline("    Input obfuscator -> ");
+if($a == 1){
+system("php .kaka bot.php");
+}elseif($a == 2){
+system("php .kakav1 bot.php");
+}elseif($a == 3){
+system("php .babyv1 bot.php");
+}elseif($a == 4){
+system("php .babyv2 bot.php");
+}
+
+
+
+
