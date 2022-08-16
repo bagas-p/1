@@ -31,10 +31,10 @@ $p 2. Ubah nama file yang mau di encryp dengan nama bot.php
 $p 3. Pilih menu obfuscator yang mau di gunakan
 $p 4. Enjoyy\n";
 echo "\t╭──────────────$bmerah$white • OBFUSCATOR • $r$white──────────────╮\n";
-echo "\t│ $white[$green1$white] Kakatoji x Scripter india              │\n";
-echo "\t│ $white[$green2$white] Kakatoji v1                            │\n";               
-echo "\t│ $white[$green3$white] Babybot V1                             │\n";                           
-echo "\t│ $white[$green4$white] Babybot V2                             │\n";                                     
+echo "\t│ \033[1;97m[\033[1;32m1\033[1;97m] Kakatoji x Scripter india              │\n";
+echo "\t│ \033[1;97m[\033[1;32m2\033[1;97m] Kakatoji v1                            │\n";               
+echo "\t│ \033[1;97m[\033[1;32m3\033[1;97m] Babybot V1                             │\n";                           
+echo "\t│ \033[1;97m[\033[1;32m4\033[1;97m] Babybot V2                             │\n";                                     
 echo "\t╰────────────────────────────────────────────╯\n";
 
 $a = readline("    Input obfuscator -> ");
