@@ -27,9 +27,9 @@ echo "$p$yellow  Crated by BP12 & Encrypt From Kakatoji and Babybot\n";
 echo $p.$white.str_repeat('=',55)."\n\n";
 echo "$red    Tutorial :
 $p$green 1.$white Taruh File yang mau di encrypt satu file dengan obfustaor
-$p$green 2.$white Ubah nama file yang mau di encryp dengan nama bot.php 
+$p$green 2.$white Ubah nama file yang mau di encryp dengan nama$red bot.php 
 $p$green 3.$whitw Pilih menu obfuscator yang mau di gunakan
-$pgreen 4. Enjoyy\n";
+$p$green 4.$white Enjoyy\n";
 echo "\t╭──────────────$bmerah$white • OBFUSCATOR • $r\033[1;97m──────────────╮\n";
 echo "\t│ \033[1;97m[\033[1;32m1\033[1;97m] Kakatoji x Scripter india              │\n";
 echo "\t│ \033[1;97m[\033[1;32m2\033[1;97m] Kakatoji v1                            │\n";               
