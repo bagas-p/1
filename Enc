@@ -1,25 +1,40 @@
 <?php
-
+/* WARNA */
+$bbiru = "\033[44m";
+$bmerah = "\033[41m";
+$bkuning = "\033[43m";
+$bbiru2 = "\033[46m";
+$bungu = "\033[45m";
+$bhijau = "\033[42m";
+$bputih = "\033[47m";
+$r="\033[0m";
+$white = "\033[1;97m";
+$abu = "\033[1;30m";
+$red = "\033[1;31m";
+$green = "\033[1;32m";
+$yellow = "\033[1;33m";
+$blue = "\033[1;34m";
+$purple = "\033[1;35m";
 
 system("clear");
 $p = "      ";
 echo "
-$p        ╔═╗┌┐ ┌─┐┬ ┬┌─┐┌─┐┌─┐┌┬┐┌─┐┬─┐  ╔═╗╦ ╦╔═╗
+$p$red        ╔═╗┌┐ ┌─┐┬ ┬┌─┐┌─┐┌─┐┌┬┐┌─┐┬─┐  ╔═╗╦ ╦╔═╗
 $p        ║ ║├┴┐├┤ │ │└─┐│  ├─┤ │ │ │├┬┘  ╠═╝╠═╣╠═╝
-$p        ╚═╝└─┘└  └─┘└─┘└─┘┴ ┴ ┴ └─┘┴└─  ╩  ╩ ╩╩  \n";
-echo $p.str_repeat('=',55)."\n";
-echo "$p Crated by BP12 & Encrypt From Kakatoji and Babybot\n";
-echo $p.str_repeat('=',55)."\n\n";
+$p   $white     ╚═╝└─┘└  └─┘└─┘└─┘┴ ┴ ┴ └─┘┴└─  ╩  ╩ ╩╩  \n";
+echo $p.$white.str_repeat('=',55)."\n";
+echo "$p$yellow Crated by BP12 & Encrypt From Kakatoji and Babybot\n";
+echo $p.$white.str_repeat('=',55)."\n\n";
 echo "    Tutorial :
 $p 1. Taruh File yang mau di encrypt satu file dengan obfustaor
 $p 2. Ubah nama file yang mau di encryp dengan nama bot.php 
 $p 3. Pilih menu obfuscator yang mau di gunakan
 $p 4. Enjoyy\n";
-echo "\t╭────────────── • OBFUSCATOR • ──────────────╮\n";
-echo "\t│ [1] Kakatoji x Scripter india              │\n";
-echo "\t│ [2] Kakatoji v1                            │\n";               
-echo "\t│ [3] Babybot V1                             │\n";                           
-echo "\t│ [4] Babybot V2                             │\n";                                     
+echo "\t╭──────────────$bmerah$white • OBFUSCATOR • $r$white──────────────╮\n";
+echo "\t│ $white[$green1$white] Kakatoji x Scripter india              │\n";
+echo "\t│ $white[$green2$white] Kakatoji v1                            │\n";               
+echo "\t│ $white[$green3$white] Babybot V1                             │\n";                           
+echo "\t│ $white[$green4$white] Babybot V2                             │\n";                                     
 echo "\t╰────────────────────────────────────────────╯\n";
 
 $a = readline("    Input obfuscator -> ");
