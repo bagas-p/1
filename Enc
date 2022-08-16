@@ -23,14 +23,14 @@ $p$red        ╔═╗┌┐ ┌─┐┬ ┬┌─┐┌─┐┌─┐┌┬�
 $p        ║ ║├┴┐├┤ │ │└─┐│  ├─┤ │ │ │├┬┘  ╠═╝╠═╣╠═╝
 $p   $white     ╚═╝└─┘└  └─┘└─┘└─┘┴ ┴ ┴ └─┘┴└─  ╩  ╩ ╩╩  \n";
 echo $p.$white.str_repeat('=',55)."\n";
-echo "$p$yellow Crated by BP12 & Encrypt From Kakatoji and Babybot\n";
+echo "$p$yellow  Crated by BP12 & Encrypt From Kakatoji and Babybot\n";
 echo $p.$white.str_repeat('=',55)."\n\n";
-echo "    Tutorial :
-$p 1. Taruh File yang mau di encrypt satu file dengan obfustaor
-$p 2. Ubah nama file yang mau di encryp dengan nama bot.php 
-$p 3. Pilih menu obfuscator yang mau di gunakan
-$p 4. Enjoyy\n";
-echo "\t╭──────────────$bmerah$white • OBFUSCATOR • $r$white──────────────╮\n";
+echo "$red    Tutorial :
+$p$green 1.$white Taruh File yang mau di encrypt satu file dengan obfustaor
+$p$green 2.$white Ubah nama file yang mau di encryp dengan nama bot.php 
+$p$green 3.$whitw Pilih menu obfuscator yang mau di gunakan
+$pgreen 4. Enjoyy\n";
+echo "\t╭──────────────$bmerah$white • OBFUSCATOR • $r\033[1;97m──────────────╮\n";
 echo "\t│ \033[1;97m[\033[1;32m1\033[1;97m] Kakatoji x Scripter india              │\n";
 echo "\t│ \033[1;97m[\033[1;32m2\033[1;97m] Kakatoji v1                            │\n";               
 echo "\t│ \033[1;97m[\033[1;32m3\033[1;97m] Babybot V1                             │\n";                           
