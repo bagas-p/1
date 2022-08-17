@@ -23,7 +23,7 @@ echo "$green Conecting Server...\r";
 sleep(2);
 echo "$green Connected              \r";
 sleep(1);
-echo "$white Note :\n$green Tambahin Deobfuscator ga nih, atau tambahin variasi obfuscator lain? req ke creator yah wkwkwk\n";
+echo "$white Note :        \n$green Tambahin Deobfuscator ga nih, atau tambahin variasi obfuscator lain? req ke creator yah wkwkwk\n";
 sleep(3);
 system("clear");
 $p = "      ";
