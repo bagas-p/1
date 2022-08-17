@@ -50,6 +50,6 @@ system("php .babyv2 bot.php");
 }elseif($a == 5){
 echo "$white  Jangan bre Dosa \n";
 
-
+}
 
 
