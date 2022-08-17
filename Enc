@@ -36,7 +36,7 @@ echo "\t│ \033[1;97m[\033[1;32m2\033[1;97m] Kakatoji v1                       
 echo "\t│ \033[1;97m[\033[1;32m3\033[1;97m] Babybot V1                             │\n";                           
 echo "\t│ \033[1;97m[\033[1;32m4\033[1;97m] Babybot V2                             │\n";                                     
 echo "\t╰────────────────────────────────────────────╯\n";
-
+echo "$white Note : Tambahin Deobfuscator ga nih, atau tambahin variasi obfuscator lain? \n";
 $a = readline("    Input obfuscator -> ");
 if($a == 1){
 system("php .kaka bot.php");
