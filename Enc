@@ -35,6 +35,7 @@ echo "\t│ \033[1;97m[\033[1;32m1\033[1;97m] Kakatoji x Scripter india         
 echo "\t│ \033[1;97m[\033[1;32m2\033[1;97m] Kakatoji v1                            │\n";               
 echo "\t│ \033[1;97m[\033[1;32m3\033[1;97m] Babybot V1                             │\n";                           
 echo "\t│ \033[1;97m[\033[1;32m4\033[1;97m] Babybot V2                             │\n";                                     
+echo "\t│ \033[1;97m[\033[1;32m5\033[1;97m] Decode?                                │\n";                                     
 echo "\t╰────────────────────────────────────────────╯\n";
 echo "$white Note :$green Tambahin Deobfuscator ga nih, atau tambahin variasi obfuscator lain? \n";
 $a = readline("    Input obfuscator -> ");
@@ -46,7 +47,8 @@ system("php .kakav1 bot.php");
 system("php .babyv1 bot.php");
 }elseif($a == 4){
 system("php .babyv2 bot.php");
-}
+}elseif($a == 5){
+echo "$white  Jangan bre Dosa \n";
 
 
 
