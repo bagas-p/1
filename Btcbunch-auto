@@ -204,6 +204,7 @@ goto awalan;
 bk();
 $api = Save("user-agent");
 $cookie = save("Cookie");
+$wallet = save("Email_FP");
 system('clear');
 
 
@@ -211,6 +212,7 @@ $res = get('https://btcbunch.com/dashboard');
 $bal = explode(' tokens',explode('h3 class="info">',$res)[1])[0];
 banner("BtcBunch-Auto",1);
 echo $yellow."『』".$yellow."ʙᴀʟᴀɴᴄᴇ ⫸$white $bal ᴛᴏᴋᴇɴꜱ\n\n";
+auto:
 while(true){
 $res = get("https://btcbunch.com/auto");
 $token = explode('"',explode('name="token" value="',$res)[1])[0];
@@ -226,6 +228,23 @@ $bal = explode(' tokens',explode('h3 class="info">',$res)[1])[0];
 echo $yellow."『』".$green."ɢᴏᴏᴅ ᴊᴏʙ!, $suc ᴛᴏᴋᴇɴꜱ ʜᴀꜱ ʙᴇᴇɴ ᴀᴅᴅᴇᴅ ᴛᴏ ʏᴏᴜʀ ᴀᴄᴄᴏᴜɴᴛ ʙᴀʟᴀɴᴄᴇ!\n";
 echo $yellow."『』".$yellow."ʙᴀʟᴀɴᴄᴇ ⫸$white $bal ᴛᴏᴋᴇɴꜱ\n";
 echo "$green  ────────────────────".$yellow."───────────────────".$white."──────────────────────────\n";
+if($bal > 10000){
+goto wede;
+}
+}
+}
 
-}
-}
+
+wede:
+$res = get("https://btcbunch.com/withdraw");
+$csrf = explode('"',explode('csrf_token_name" value="',$res)[1])[0];
+$amount = explode('"',explode('amount" id="tokenBalance" style="color: #ffc800; background-color: #1b1b22; border-color:#ffc800; font-weight: bold;" value="',$res)[1])[0];
+$res = post("https://btcbunch.com/withdraw/withdraw","csrf_token_name=".$csrf."&method=11&wallet=".$wallet."&amount=".$amount);
+$suc=explode(" tokens",explode("'Good job!', '",$res)[1])[0];
+if($suc){
+echo $yellow."『』".$green."ᴡɪᴛʜᴅʀᴀᴡ ꜱᴜᴄᴄᴇꜱꜱ, $suc ᴛᴏᴋᴇɴꜱ ʜᴀꜱ ʙᴇᴇɴ ᴀᴅᴅᴇᴅ ᴛᴏ ʏᴏᴜʀ ᴀᴄᴄᴏᴜɴᴛ!\n";
+echo "$green  ────────────────────".$yellow."───────────────────".$white."──────────────────────────\n";
+goto auto;
+}else{
+echo "Withdraw Failed \r";
+goto auto;}
