@@ -123,7 +123,7 @@ echo Slow("                        \r");
 /* END FUNCTION */
 awalan:
 bk();
-echo "$red Script OFF/Mantance\n";
+echo "$red Script OFF/Mantance\n";exit;
 $d = date('D');
 switch($d){
 case "Sat":
