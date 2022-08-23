@@ -202,19 +202,42 @@ $api = Save("User_Agent");
 $cookie = save("Cookie");
 $wallet = save("Email_FP");
 system('clear');
+banner("ptc.hpfaucet.xyz",2.1);
+menu:
 $res = curl('https://ptc.hpfaucet.xyz/dashboard', null, head())[1];
 $user = explode('<',explode('<h5 class="font-size-15 text-truncate">',$res)[1])[0];
 $bal = explode('<',explode('<h4 class="mb-0">',$res)[1])[0];
-banner("ptc.hpfaucet.xyz",1);
-echo " $white Balance$yellow ~>$red $bal \n\n";
-echo "$red 1.$white All Claim \t $red 2.$white Flip \n";
+$en = explode('<',explode('<h4 class="mb-0">',$res)[2])[0];
+$ptcn = explode('<',explode('PTC <span class="badge badge-info">',$res)[1])[0];
+$res = curl('https://ptc.hpfaucet.xyz/faucet', null, head())[1];
+$f=explode('<',explode('<p class="lh-1 mb-1 font-weight-bold">',$res)[3])[0];
+$res = curl('https://ptc.hpfaucet.xyz/madfaucet', null, head())[1];
+$md=explode('<',explode('<p class="lh-1 mb-1 font-weight-bold">',$res)[3])[0];
+echo "$red 1.$white Faucet$yellow ~>$green $f\n";
+echo "$red 2.$white Mad Faucet$yellow ~>$green $md\n";
+echo "$red 3.$white PTC$yellow ~>$green $ptcn\n";
+echo "$red 4.$white Withdraw$yellow ~>$green $bal\n";
+echo "$red 5.$white CoinFlip\n";
+echo "$red 6.$white While$yellow ~>$green $en\n";
 $pilih = readline("$white Input Number : ");
 if($pilih == 1 ){
 echo "\n";
 goto lanjut;
 }elseif($pilih == 2){
 echo "\n";
+goto mad;
+}elseif($pilih == 3){
+echo "\n";
+goto ptc;
+}elseif($pilih == 4){
+echo "\n";
+goto wd;
+}elseif($pilih == 5){
+echo "\n";
 goto flip;
+}elseif($pilih == 6){
+echo "\n";
+goto wh;
 }
 run:
 lanjut:
@@ -242,7 +265,8 @@ goto fire;
 }
 $tim=explode(' - 1',explode('var wait = ',$res)[1])[0];
 if($tim != null){
-goto mad;
+timer($tim);
+goto lanjut;
 }
 
 $csrf=explode('"',explode('id="token" value="',$res)[1])[0];
@@ -269,20 +293,13 @@ $amount = explode('"',explode('<input type="number" name="amount" id="tokenBalan
 echo Slow("$bmerah$white √ $r$green Good job!, $suc has been added to your account balance! \n");
 echo Slow("$bmerah$white √ $r$white Balance$yellow ~>$red $bal  $white Claim Left$yellow ~>$red $f \n");
 g();
-if($amount > 0.1){
-goto wd;
-}
-if($ptcn != 0){
-goto ptc;
-}
-if($en != 0){
-goto wh;
-}
 goto akhir;
 }else{
 echo slow(" \r                                              \r");
 goto lanjut;
 }
+
+
 fire:
 $res = curl('https://ptc.hpfaucet.xyz/firewall', null, head())[1];
 $crf=explode('"',explode('name="csrf_token_name" value="',$res)[1])[0];
@@ -310,7 +327,7 @@ $res= get($url,$ua);
 $urlview=explode("'",explode("window.location = '",$res)[1])[0];
 if($urlview!=""){
 }else{
-goto lanjut;
+goto menu;
 }
 $ua=head();
 $url="$urlview";
@@ -359,10 +376,10 @@ $ss=explode("'",explode("'Good job!', '",$res)[1])[0];
 if($ss){
 echo Slow("$bmerah$white √ $r$green Withdraw Succes, $ss \n");
 g();
-goto lanjut;
+goto menu;
 }
 }
-goto lanjut;
+goto menu;
 }
 
 
@@ -370,12 +387,25 @@ goto lanjut;
 wh:
 $res = get("https://ptc.hpfaucet.xyz/wheel");
 $f=explode('/',explode('<p class="lh-1 mb-1 font-weight-bold">',$res)[3])[0];
-if($f < 1){
-goto lanjut;
+if($f == 0){
+goto menu;
 }
 $fire = explode(' |',explode('<title>',$res)[1])[0];
 if($fire == "Firewall"){
-goto fire;
+$res = curl('https://ptc.hpfaucet.xyz/firewall', null, head())[1];
+$crf=explode('"',explode('name="csrf_token_name" value="',$res)[1])[0];
+$res = curl('https://ptc.hpfaucet.xyz/firewall/verify', "&g-recaptcha-response=&captchaType=recaptchav2&csrf_token_name=$crf", head())[1];
+$sts=explode('<',explode('fa-exclamation-circle"></i>',$res)[1])[0];
+if($sts!=""){
+echo Slow(" \033[1;31mFirewall Active                \r");
+sleep(1);
+echo Slow(" \033[1;93m                            \r");
+goto mad;
+}
+$bal = explode('<',explode('<h4 class="mb-0">',$res)[1])[0];
+if($bal!=""){
+goto mad;
+}
 }
 if(preg_match('/Cloudflare/',$res)){
 		echo "Cloudflare detect, \n";
@@ -409,7 +439,7 @@ $amount = explode('"',explode('<input type="number" name="amount" id="tokenBalan
 echo Slow("$bmerah$white √ $r$green Good job!, $reward has been added to your account balance! \n");
 echo Slow("$bmerah$white √ $r$white Balance$yellow ~>$red $bal  $white Energy$yellow ~>$red $en \n");
 g();
-goto lanjut;
+goto wh;
 }else{
 goto wh;
 }
@@ -427,10 +457,7 @@ if(preg_match('/Cloudflare/',$res)){
 		}
 $f=explode('/',explode('<p class="lh-1 mb-1 font-weight-bold">',$res)[3])[0];
 if($f == 0){
-$res = curl('https://ptc.hpfaucet.xyz/faucet', null, head())[1];
-$tim=explode(' - 1',explode('var wait = ',$res)[1])[0];
-timer($tim);
-goto lanjut;
+goto menu;
 }
 if($fire == "Firewall"){
 goto fire;
@@ -465,16 +492,8 @@ $amount = explode('"',explode('<input type="number" name="amount" id="tokenBalan
 echo Slow("$bmerah$white √ $r$green Good job!, $suc has been added to your account balance! \n");
 echo Slow("$bmerah$white √ $r$white Balance$yellow ~>$red $bal  $white Claim Left$yellow ~>$red $f \n");
 g();
-if($amount > 0.1){
-goto wd;
-}
-if($ptcn != 0){
-goto ptc;
-}
-if($en != 0){
-goto wh;
-}
-goto lanjut;
+
+goto mad;
 }else{
 echo slow(" \r                                              \r");
 goto mad;
@@ -484,7 +503,7 @@ goto mad;
 
 
 flip:
-echo "$white Klo udah profit udahin kontol tar balancelu habis\n";
+echo "$red Gausah nafsu tod kalo dah profit mending udahan jangan di gass terus \n";
 echo "$red 1.$white BTC \t $red 2.$white ETH \n";
 $coin = readline("$white Pilih Coin : ");
 if($coin == 1){
