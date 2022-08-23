@@ -87,13 +87,21 @@ echo ("\033[1;97m                                                       |___/ \n
 echo ("\033[1;97m\n──────────────────────────────────────────────────────────────────\n");                                                  
 }
 function banner($sc,$v){
-c();
-$api = json_decode(file_get_contents("http://ip-api.com/json"),true);
-$timezone=$api["timezone"];
-$country=$api["country"];
-$ip=$api["query"];
-date_default_timezone_set("$timezone");
-global $red,$white,$green,$bmerah,$r;
+$bbiru = "\033[44m";
+$bmerah = "\033[41m";
+$bkuning = "\033[43m";
+$bbiru2 = "\033[46m";
+$bungu = "\033[45m";
+$bhijau = "\033[42m";
+$bputih = "\033[47m";
+$r="\033[0m";
+$white = "\033[1;97m";
+$abu = "\033[1;30m";
+$red = "\033[1;31m";
+$green = "\033[1;32m";
+$yellow = "\033[1;33m";
+$blue = "\033[1;34m";
+$purple = "\033[1;35m";
 system("clear");
 echo slow("\033[1;97m────────────────────────────[$white$bmerah XD-Fantasy $r]────────────────────────\n");
 echo Slow( $red." ██╗  ██╗██████╗");echo Slow( $white."  [✓] CREATOR   :$green BP12\n");
