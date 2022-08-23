@@ -122,6 +122,7 @@ echo Slow("                        \r");
 }                       
 /* END FUNCTION */
 awalan:
+/*
 $d = date('D');
 switch($d){
 case "Sat":
@@ -185,6 +186,7 @@ goto awalan;
 }
 }else{
 }
+*/
 
 function head(){
 $ua[]="Host: ptc.hpfaucet.xyz";
@@ -195,7 +197,9 @@ $ua[]="User-Agent: ".file_get_contents("User_Agent");
 $ua[]="Cookie: ".file_get_contents("Cookie"); 
    return $ua;
 }
-
+bk();
+echo "$green Free Key untuk hari ini karena link error, Selamat Menuyul dan jangan lupa bersyukur 🙏😇 \n";
+sleep(7);
 
 bk();
 $api = Save("User_Agent");
