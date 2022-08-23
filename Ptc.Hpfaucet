@@ -370,7 +370,7 @@ goto lanjut;
 wh:
 $res = get("https://ptc.hpfaucet.xyz/wheel");
 $f=explode('/',explode('<p class="lh-1 mb-1 font-weight-bold">',$res)[3])[0];
-if($f < 0){
+if($f < 1){
 goto lanjut;
 }
 $fire = explode(' |',explode('<title>',$res)[1])[0];
