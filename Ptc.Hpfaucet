@@ -205,7 +205,7 @@ $ua[]="Cookie: ".file_get_contents("Cookie");
 }
 bk();
 tel(200);
-echo "$white Loading Server [\033[1;32mONLINE\033[1;97m]\r";
+echo "$white Loading Server [\033[1;31mOFFLINE\033[1;97m]\n";exit;
 sleep(2);
 echo "$green FREE KEY UNTUK HARI INI KARENA LINK ERROR, SELAMAT MENUYUL DAN JANGAN LUPA BERSYUKUR 🙏😇 \n\n";
 sleep(3);
