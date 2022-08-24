@@ -242,7 +242,7 @@ goto coins;}else{goto coins;}
 
 wede:
 while(true){
-$met = "LTC/TRX/DOGE/DGB/FEY/DASH";
+$met = "LTC/TRX";
 $asu = explode('/',$met);
 foreach($asu as $hod){
 $res = get1("https://multifaucet.club/dashboard");
