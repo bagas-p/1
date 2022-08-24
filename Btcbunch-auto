@@ -202,7 +202,6 @@ goto awalan;
 
 
 bk();
-echo "$red Script OFF/Web Update \n"; exit;
 $api = Save("user-agent");
 $cookie = save("Cookie");
 $wallet = save("Email_FP");
