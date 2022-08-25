@@ -239,9 +239,13 @@ $res = get("https://blockhash.space/?ref=9262");
 $token = explode("'",explode("input type='hidden' name='token' value='",$res)[1])[0];
 $res = post("https://blockhash.space/?ref=9262","address=".$wallet."&token=".$token);
 $bal = explode('<',explode("Balance</span> <span class='info-box-number'> ",$res)[1])[0];
+if($bal){
 banner("blockhash.space",1);
 echo "$whitw Balance ~>$red $bal \n\n";
-
+}else{
+system("rm cookie.txt");
+goto login;
+}
 claim:
 $res = get("https://blockhash.space/index.php");
 $tim = explode(" minutes",explode("You can claim again in ",$rss)[1])[0];
