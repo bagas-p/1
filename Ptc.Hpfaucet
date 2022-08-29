@@ -129,7 +129,6 @@ echo Slow("                        \r");
 }                       
 /* END FUNCTION */
 awalan:
-/*
 $d = date('D');
 switch($d){
 case "Sat":
@@ -193,7 +192,6 @@ goto awalan;
 }
 }else{
 }
-*/
 function head(){
 $ua[]="Host: ptc.hpfaucet.xyz";
 $ua[]="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";
@@ -205,15 +203,16 @@ $ua[]="Cookie: ".file_get_contents("Cookie");
 }
 bk();
 tel(200);
-echo "$white Loading Server [\033[1;31mOFFLINE\033[1;97m]\n";exit;
+echo "$white Loading Server [\033[1;32mONLINE\033[1;97m]\n";
 sleep(2);
+/*
 echo "$green FREE KEY UNTUK HARI INI KARENA LINK ERROR, SELAMAT MENUYUL DAN JANGAN LUPA BERSYUKUR 🙏😇 \n\n";
 sleep(3);
 echo "JANGAN LUPA JUGA GABUNG GRUP TELEGRAM $white https://t.me/bagasp1205cps \n";
 sleep(3);
 echo "\n\n\n$green TERIMA KASIH \n\n    $white BP12 \n";
 sleep(3);
-
+*/
 bk();
 $api = Save("User_Agent");
 $cookie = save("Cookie");
