@@ -500,10 +500,6 @@ $b2=explode('\"',explode('rel=\"',$res)[2])[0];
 $b3=explode('\"',explode('rel=\"',$res)[3])[0];
 $bot = "+$b1+$b2+$b3";
 $res = curl('https://ptc.hpfaucet.xyz/madfaucet/verify', "csrf_token_name=$csrf&captcha=recaptchav2&g-recaptcha-response=", head())[1];
-$fire = explode(' |',explode('<title>',$res)[1])[0];
-if($fire == "Firewall"){
-goto fire;
-}
 $f=explode('<',explode('<p class="lh-1 mb-1 font-weight-bold">',$res)[3])[0];
 $sts=explode('<',explode('fa-exclamation-circle"></i>',$res)[1])[0];
 $suc=explode(" has",explode("'Good job!', '",$res)[1])[0];
